@@ -11,8 +11,23 @@ import {login} from './store/memberSlice'
 // store, slice: 여러 컴포넌트에서 상태(state)를 공유할 때 사용
 export const Context = createContext()
 
+// API 주소 처리
+// 개발 컴퓨터에서는 localhost
+// Netlify에서는 aws 서버
 // const host = 'http://localhost:8080'
-const host = 'http://15.164.165.239:8080'
+// const host = 'http://15.164.165.239:8080'
+
+let host = null;
+
+// 현재 react app을 실행시키는 컴퓨터의 이름 확인
+// 내 개발 컴퓨터: localhost
+console.log(window.location.hostname)
+
+// if () {
+    
+// } else {
+
+// }
 
 
 // 화면이 새로고침 되었을 때 로그인 상태 유지하기
