@@ -48,6 +48,8 @@ const BoardRegister = () => {
 
     // axios 객체에서 post 함수 호출 - post 메소드
     // post 인자: 주소, 게시물 데이터, 헤더
+
+    // ex) https://resilient-figolla-b4c13b.netlify.app/api/board/register
     const response = await axios.post(`${host}/board/register`, formData, {
       headers: {
         Authorization: token

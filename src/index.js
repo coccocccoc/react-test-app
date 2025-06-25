@@ -31,10 +31,13 @@ if (window.location.hostname === 'localhost') {
     // 따라서 /api로 우회(프록시)할 것
     // 프록시란? 가짜 요청을 보내고 다시 실제 요청으로 변경
     // host = 'http://15.164.165.239:8080' X
+
+    // API 주소 없이 중간 경로만 있음
+    // 상대 경로를 사용하면 현재 사이트 주소가 자동으로 붙음
     host = '/api' // O
 }
 
-console.log('현재 api 주소: ', host)
+// ex) https://resilient-figolla-b4c13b.netlify.app/api
 
 // 화면이 새로고침 되었을 때 로그인 상태 유지하기
 
