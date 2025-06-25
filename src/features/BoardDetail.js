@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
 import { Context } from "../index";
 import { useSelector } from 'react-redux';
+import "../App.css"
 
 
 
@@ -31,6 +32,8 @@ const BoardDetail = () => {
   const { host } = useContext(Context)
   
   const token = useSelector(state => state.member.token)
+
+  const IMG_PATH = '/images'
 
   const apicall = async () => {
     // axios로 api 호출
@@ -94,6 +97,11 @@ const BoardDetail = () => {
             <Form.Label>수정일</Form.Label>
             <Form.Control type="text" value={board.modDate} readOnly />
           </Form.Group>
+
+          <Form.Group className="mb-3" controlId="board.modDate">
+            <img src={`${board.imgPath}`}></img>
+          </Form.Group>
+          
 
           <Button variant="secondary" onClick={()=>{
             navigate(`/board/modify/${board.no}`)
